@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  background-image: url("../assets/mobile/image-host.jpg");
+  background-color: #121725;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  background-blend-mode: multiply;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 78.5vw;
+  margin: auto;
+  padding-bottom: 94px;
+  position: relative;
+}
+
+.header__container svg {
+  /* width: 134px; */
+  margin: 62px auto;
+  display: block;
+}
+
+main {
+  position: relative;
+  top: 25px;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 1.65rem;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #54E6AF;
+}
+
+h1 span {
+  color: white;
+}
+
+p {
+  font-size: .933rem;
+  font-weight: 100;
+  line-height: 25px;
+  color: #C2CBE5;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 33px auto 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+img.spotify {
+  width: 17.2%;
+}
+
+img.apple {
+  width: 14%;
+}
+
+img.google {
+  width: 22.28%;
+}
+
+img.pocket {
+  width: 23.5%;
+}
+
+input[type="submit"],
+label {
+  display: block;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #54E6AF;
+  border-radius: 30px;
+  border: none;
+  line-height: 28px;
+  font-size: 0.93rem;
+  color: #121725;
+  font-weight: 600;
+}
+
+input.submitDocs {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  line-height: 28px;
+  padding-left: 25px;
+  margin-bottom: 16px;
+}
+
+form {
+  margin-top: 48px;
+  position: relative;
+}
+
+span.errorMsg {
+  display: none;
+  position: relative;
+  top: -13px;
+  left: 21px;
+  color: red;
+}
+
+span.showError {
+  display: block;
+}
+
+footer {
+  display: none;
+}
+
+@media screen and (min-width: 690px) {
+  .container {
+    margin: auto 39px;
+  }
+  .header__container svg {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  body {
+    background-blend-mode: normal;
+    background-size: 64%;
+    background-position: right top;
+    background-image: url("../assets/tablet/image-host.jpg");
+  }
+  main {
+    width: 100%;
+    top: 120px;
+    background-color: #121725;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 2fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+  }
+  .hero {
+    padding-top: 93px;
+  }
+  h1 {
+    text-align: left;
+    font-size: 2.667rem;
+    line-height: 56px;
+    letter-spacing: 3px;
+  }
+  p {
+    text-align: left;
+    margin-top: 31px;
+    width: 70.2%;
+    font-size: 1rem;
+    line-height: 28px;
+  }
+  form {
+    width: 427px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: 2/1;
+  }
+  input[type="submit"] {
+    position: absolute;
+    top: 5px;
+    width: 200px;
+    right: 3px;
+  }
+  input[type="submit"]:hover {
+    cursor: pointer;
+  }
+  input.submitDocs {
+    padding: 15px;
+    background-color: #2C344B;
+    margin-bottom: 0;
+  }
+  .socials {
+    width: 84.5%;
+    margin-left: 0;
+  }
+  span.errorMsg {
+    top: 10px;
+  }
+  .container::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 244px;
+    background-color: #121725;
+    bottom: -180px;
+    z-index: 1;
+  }
+  footer {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 232px;
+    bottom: -203px;
+    z-index: 4;
+  }
+  footer img {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .container::before {
+    height: 180px;
+    bottom: -203px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  body {
+    background-image: url("../assets/desktop/image-host.jpg");
+    background-position: right 135px;
+  }
+  .header__container svg {
+    margin: 102px auto 0 0;
+  }
+  main {
+    width: 60%;
+  }
+  .container {
+    margin: auto 165px;
+  }
+  .container::before {
+    bottom: -150px;
+  }
+  footer {
+    left: auto;
+    right: -150px;
+    width: 232px;
+    bottom: -33px;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .container {
+    width: 1400px;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
